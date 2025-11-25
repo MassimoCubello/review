@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Page</title>
+</head>
+<body>
+    <h1>JavaScript Greeting</h1>
+    <script>
+
+        let now = new Date();
+        document.write("<p>Current Date and Time: " + now + "</p>");
+
+        let day = now.getDay();
+        // day = 6; // For testing purposes
+        document.write("<p>The current day is: " + day + "</p>");
+
+        let hour = now.getHours();
+        // hour = 15; // For testing purposes
+        document.write("<p>The current hour is: " + hour + "</p>");
+
+        if (day == 1) {
+            document.write("<h2>Do you have a case of the Mondays?</h2>");
+        } else if (day == 5 && hour >= 12) {
+            document.write("<p>It's almost the weekend!</p>");
+        } else if (day == 0 || day == 6) {
+            document.write("<p>It's the weekend!</p>");
+        } else if (hour < 12) {
+            document.write("<p>Have a good morning!</p>");
+        } else {
+            document.write("<p>Have a good day!</p>");
+        }    
+
+    </script>
+</body>
+</html>
