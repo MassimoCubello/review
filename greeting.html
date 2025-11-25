@@ -3,35 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greeting Page</title>
+    <title>JavaScript Greeting</title>
 </head>
 <body>
+    
     <h1>JavaScript Greeting</h1>
+
     <script>
 
+        /*
+        Monday - Do you have a case of the Mondays?
+        Friday Afternoon - It’s almost the weekend!
+        Before Noon - Have a good morning!
+        After Noon - Have a good day!
+        Weekend - It’s the weekend!!!
+        */
+
         let now = new Date();
-        document.write("<p>Current Date and Time: " + now + "</p>");
+        document.write("<p>Current date is: " + now + "</p>");
 
         let day = now.getDay();
-        // day = 6; // For testing purposes
+        day = 6;
         document.write("<p>The current day is: " + day + "</p>");
 
         let hour = now.getHours();
-        // hour = 15; // For testing purposes
+        hour = 15;
         document.write("<p>The current hour is: " + hour + "</p>");
 
-        if (day == 1) {
+        if( day == 1 )
+        {
             document.write("<h2>Do you have a case of the Mondays?</h2>");
-        } else if (day == 5 && hour >= 12) {
-            document.write("<p>It's almost the weekend!</p>");
-        } else if (day == 0 || day == 6) {
-            document.write("<p>It's the weekend!</p>");
-        } else if (hour < 12) {
-            document.write("<p>Have a good morning!</p>");
-        } else {
-            document.write("<p>Have a good day!</p>");
-        }    
+        }
+        else if( day == 5 && hour > 12 )
+        {
+            document.write("<h2>It’s almost the weekend!</h2>");
+        }
+        else if( day == 6 || day == 0 )
+        {
+            document.write("<h2>It’s the weekend!!!</h2>");
+        }
+        else if( hour > 12 )
+        // else if( ( day == 2 || day == 3 || day == 4 ) && hour > 12 )
+        {
+            document.write("<h2>Have a good afternoon!</h2>");
+        }
+        else
+        // else if( ( day == 2 || day == 3 || day == 4 || day == 5) && hour <= 12 )
+        {
+            document.write("<h2>Have a good morning!</h2>");
+        }
+
+
 
     </script>
+
 </body>
 </html>
